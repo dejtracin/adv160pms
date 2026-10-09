@@ -56,7 +56,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .odo-form input{width:9em;padding:8px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:var(--panel-ink)}
 .btn{border:0;border-radius:6px;padding:9px 14px;font-weight:600;cursor:pointer;background:var(--accent);color:#fff}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.btn.small{padding:6px 11px;font-size:.92rem}
+.btn{white-space:nowrap}
+.btn.small{padding:8px 14px;font-size:.92rem;min-height:38px}
 .cluster .btn{background:#F4D9A0;color:#17242E}
 .since{display:flex;gap:8px;align-items:center;font-size:.9rem;opacity:.85;margin-top:14px}
 .since input{padding:5px 8px;border-radius:6px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:var(--panel-ink);color-scheme:dark}
@@ -126,7 +127,8 @@ dialog input,dialog select,dialog textarea{padding:8px 10px;border:1px solid var
   .bike{order:-1;max-width:420px;margin:0 auto}
   .row{grid-template-columns:12px minmax(0,1fr) auto;row-gap:6px}
   .row .iv{display:none}
-  .row .due{grid-column:2/4}
+  .row .due{grid-column:2/4;grid-row:2}
+  .row > .btn{grid-column:3;grid-row:1;align-self:start}
   .detail{grid-template-columns:1fr;padding-left:26px}
   .checks{columns:1}
   .notes{grid-template-columns:1fr}
