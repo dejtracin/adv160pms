@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ADV160 Maintenance Log</title>
+<title>ADV160 Maintenance Log (Standard PMS)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Barlow:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -140,7 +140,7 @@ dialog input,dialog select,dialog textarea{padding:8px 10px;border:1px solid var
 <header class="cluster">
   <div class="cluster-in">
     <div>
-      <h1 class="model">Honda ADV160<small>Preventive maintenance log</small></h1>
+      <h1 class="model">Honda ADV160<small>Preventive maintenance log · Honda standard schedule</small></h1>
       <div class="since"><label for="since">Date bought</label><input type="date" id="since"></div>
     <div class="odo">
       <div class="odo-label" id="odoLabel">Odometer</div>
@@ -157,7 +157,7 @@ dialog input,dialog select,dialog textarea{padding:8px 10px;border:1px solid var
 </header>
 
 <main class="wrap">
-  <p class="notice">Service intervals follow Honda's schedule for the ADV160, in km or months, whichever comes first. Engine oil uses your own schedule: 500 km, 1,500 km, then every 1,500 km. Schedules differ a little by country, so compare with your owner's manual, and tap any item to change its interval.</p>
+  <p class="notice">Service intervals follow Honda's schedule for the ADV160, in km or months, whichever comes first. Schedules differ a little by country, so compare with your owner's manual, and tap any item to change its interval.</p>
 
   <h2>Service schedule</h2>
   <p class="lede">Log a service when it's done and the page works out when it's next due. If the scooter isn't new, log the last time each item was done.</p>
@@ -203,10 +203,10 @@ dialog input,dialog select,dialog textarea{padding:8px 10px;border:1px solid var
 <script>
 (function(){
 const TEMPLATE = '<!DOCTYPE html>\n' + document.documentElement.outerHTML.replace(/^<html[^>]*>/, '<html lang="en">');
-const LS = 'adv160-maintenance-v1';
+const LS = 'adv160-standard-pms-v1';
 
 const ITEMS = [
- {id:'oil', name:'Engine oil', act:'Replace', km:1500, mo:12, firsts:[500,1500], note:'First change at 500 km, second at 1,500 km, then every 1,500 km (3,000, 4,500, 6,000 and so on). Check the level at every pre-ride inspection.'},
+ {id:'oil', name:'Engine oil', act:'Replace', km:4000, mo:12, first:1000, note:'First change at 1,000 km, then every 4,000 km or every year, whichever comes first. Check the level before each ride.'},
  {id:'gear', name:'Gear oil', act:'Replace', km:12000, mo:24, first:1000, dealer:true, note:'First change at 1,000 km, then at the regular interval. Also called final drive oil in the manual.'},
  {id:'air', name:'Air filter', act:'Replace', km:16000, mo:0, note:'Paper-type filter: replace it, do not wash or blow it out. Change it sooner if you ride in dust or rain a lot.'},
  {id:'breather', name:'Breather drain tube', act:'Clean', km:4000, mo:0, note:'The small clear tube under the air filter box. Empty it more often if you ride in rain or at full throttle, or whenever you see oil or dirt in it.'},
